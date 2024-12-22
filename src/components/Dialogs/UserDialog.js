@@ -18,10 +18,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-
 export function UserTrainerModal() {
   const [open, setOpen] = React.useState(false);
-
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
@@ -36,7 +34,6 @@ export function UserTrainerModal() {
     </Dialog>
   );
 }
-
 function UserTrainerForm({ className }) {
   return (
     <form className={cn("grid gap-4", className)}>
@@ -51,7 +48,6 @@ function UserTrainerForm({ className }) {
           <Input required type="text" id="lastName" defaultValue="" />
         </div>
       </div>
-
       {/* Row 2: Education & CNIC */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div className="grid gap-2">
@@ -63,25 +59,21 @@ function UserTrainerForm({ className }) {
           <Input required type="text" id="cnic" defaultValue="" />
         </div>
       </div>
-
       {/* Row 3: Email */}
       <div className="grid gap-2">
         <Label htmlFor="email">Email</Label>
         <Input required type="email" id="email" defaultValue="" />
       </div>
-
       {/* Row 4: Profile Picture */}
       <div className="grid gap-2">
         <Label htmlFor="profilePicture">Profile Picture</Label>
         <Input required type="file" id="profilePicture" />
       </div>
-
       {/* Row 5: Address */}
       <div className="grid gap-2">
         <Label htmlFor="address">Address</Label>
         <Input required type="text" id="address" defaultValue="" />
       </div>
-
       {/* Row 6: Gender & Role */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div className="grid gap-2">
@@ -110,7 +102,6 @@ function UserTrainerForm({ className }) {
           </Select>
         </div>
       </div>
-
       {/* Submit Button */}
       <Button type="submit">Add User/Trainer</Button>
     </form>

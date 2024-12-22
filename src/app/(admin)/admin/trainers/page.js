@@ -1,8 +1,18 @@
+import { UserTrainerTable } from "@/components/DataTables/UserTable";
+import { UserTrainerModal } from "@/components/Dialogs/UserDialog";
 
-export default function Trainers(){
-    return(
-        <div className="min-h-screen p-10">
-<h1 className="text-4xl font-bold text-center">Trainers</h1>
-        </div>
-    );
+import React from "react";
+
+export default function Trainers() {
+  return (
+    <>
+      <div className="mt-24 flex items-center justify-between  container mx-auto text-4xl font-bold">
+        Trainers
+        <UserTrainerModal />
+      </div>
+      <div className="container mx-auto">
+        <UserTrainerTable />
+      </div>
+    </>
+  );
 }
